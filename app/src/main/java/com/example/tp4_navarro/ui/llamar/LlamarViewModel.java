@@ -36,7 +36,7 @@ public class LlamarViewModel extends AndroidViewModel {
         if (num.equals("")||num.length()<10) {
             mText.setValue("Ingrese un numero correcto");
         } else {
-            Intent intent = new Intent(Intent.ACTION_DIAL);
+            Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:" + num));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
